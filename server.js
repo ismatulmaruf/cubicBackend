@@ -9,6 +9,7 @@ import userRoutes from "./routes/userRoutes.js";
 import homeRoutes from "./routes/homeRoutes.js";
 import contactRoutes from "./routes/contactRoutes.js";
 import cors from "cors";
+import Package from "./routes/packageRoutes.js";
 
 const port = process.env.PORT || 5000;
 
@@ -35,6 +36,7 @@ app.use(cookieParser());
 app.use("/api/users", userRoutes);
 app.use("/api/home", homeRoutes);
 app.use("/api/contact", contactRoutes);
+app.use("/api/package", Package);
 
 // Development fallback for serving an initial response
 app.get("/", (req, res) => {
