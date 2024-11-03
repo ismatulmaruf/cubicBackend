@@ -10,6 +10,7 @@ import homeRoutes from "./routes/homeRoutes.js";
 import contactRoutes from "./routes/contactRoutes.js";
 import cors from "cors";
 import Package from "./routes/packageRoutes.js";
+import blogRoutes from "./routes/blogRoutes.js";
 
 const port = process.env.PORT || 5000;
 
@@ -37,6 +38,7 @@ app.use("/api/users", userRoutes);
 app.use("/api/home", homeRoutes);
 app.use("/api/contact", contactRoutes);
 app.use("/api/package", Package);
+app.use("/api/blogs", blogRoutes);
 
 // Development fallback for serving an initial response
 app.get("/", (req, res) => {
